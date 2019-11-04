@@ -1,0 +1,12 @@
+{
+  "docs": {
+    "Visão Geral": ["doc1"],
+    "Ambiente de Testes": ["doc2"],
+    "Instalação da API (SDKs)": ["doc3","doc4","doc5","doc6","doc7","doc8","doc9","doc10","doc11"],
+    "Boleto Bancário":["doc12","doc13"],
+    "Cartão de Crédito":[]
+  },
+  "docs-other": {
+    "First Category": ["doc41", "doc51"]
+  }
+}
