@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "examples": "docusaurus-examples",
+    "write-translations": "docusaurus-write-translations",
+    "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
+    "crowdin-download": "crowdin --config ../crowdin.yaml download -b master"
+  }
+}

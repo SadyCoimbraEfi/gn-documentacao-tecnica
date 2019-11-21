@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 const languages = [
   {
     enabled: true,
@@ -52,7 +45,7 @@ const languages = [
     tag: 'el',
   },
   {
-    enabled: false,
+    enabled: true,
     name: 'Español',
     tag: 'es-ES',
   },
@@ -127,7 +120,7 @@ const languages = [
     tag: 'pt-PT',
   },
   {
-    enabled: false,
+    enabled: true,
     name: 'Português (Brasil)',
     tag: 'pt-BR',
   },

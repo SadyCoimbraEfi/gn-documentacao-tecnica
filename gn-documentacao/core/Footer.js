@@ -7,8 +7,8 @@ class Footer extends React.Component {
     const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
     const langPart = `${language ? `${language}/` : ""}`;
     return `${baseUrl}${docsPart}${langPart}${doc}`;
-  }
-
+  } 
+  
   pageUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
     return baseUrl + (language ? `${language}/` : "") + doc;
@@ -327,7 +327,7 @@ class Footer extends React.Component {
           src="https://v2.zopim.com/?2NfJzLLgYjRjfHyYSrFYaRrUkFhQMwOS"
         >
           {" "}
-        </script>
+        </script>       
       </footer>
     );
   }
