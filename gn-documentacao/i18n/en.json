@@ -6,8 +6,7 @@
     "tagline": "Documentação Técnica API",
     "docs": {
       "doc1": {
-        "title": "Introdução",
-        "sidebar_label": "Introdução"
+        "title": "Introdução"
       },
       "doc10": {
         "title": "Delphi"
@@ -47,12 +46,6 @@
       },
       "doc9": {
         "title": "Java"
-      },
-      "doc41": {
-        "title": "Other Document"
-      },
-      "doc51": {
-        "title": "Fifth Document"
       }
     },
     "links": {
@@ -67,8 +60,7 @@
       "Ambiente de Testes": "Ambiente de Testes",
       "Instalação da API (SDKs)": "Instalação da API (SDKs)",
       "Boleto Bancário": "Boleto Bancário",
-      "Cartão de Crédito": "Cartão de Crédito",
-      "First Category": "First Category"
+      "Cartão de Crédito": "Cartão de Crédito"
     }
   },
   "pages-strings": {

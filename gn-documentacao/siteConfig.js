@@ -22,7 +22,7 @@ const siteConfig = {
     {doc: 'doc1', label: 'Documentação'},
     {href: "https://github.com/gerencianet/", label: 'GitHub'},
     {href: "https://gerencianet.com.br/central-de-ajuda/api/", label: 'FAQs'},
-    {href: "https://slackin-cqtchmfquq.now.sh/", label: 'Slack'},
+    {href: "https://gerencianet.herokuapp.com/", label: 'Slack'},
     {page: 'help', label: 'Ajuda'},    
     {languages: true}
   ],
@@ -37,8 +37,6 @@ const siteConfig = {
     primaryColor: '#f26522',
     secondaryColor: '#008996',
   },
-
-  /* Custom fonts
   
   fonts: {
     myFont: [
@@ -48,7 +46,7 @@ const siteConfig = {
       '-apple-system',
       "system-ui"
     ]
-  }, */
+  }, 
   
   copyright: '© 2007-${new Date().getFullYear()} Gerencianet. Todos os direitos reservados. CNPJ: 09.089.356/0001-18',
 
@@ -58,6 +56,11 @@ const siteConfig = {
 
   // Add custom scripts
   scripts: ['https://buttons.github.io/buttons.js'],
+  
+  script:[
+    id="ze-snippet",
+    src=""
+  ],
 
   stylesheets: [
     {

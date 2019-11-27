@@ -15,17 +15,17 @@
 @media only screen and (min-width: 1500px) {
 }
 
+
 .small{
     font-size: 20px;
 }
 
-.titulo{
+.titulo, .projectTitle{
     font-family: 'Bebas Neue', cursive;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
-    vertical-align: baseline;
     outline: 0;
     font-family: 'Bebas Neue';
     font-size: 6.5rem;
@@ -42,7 +42,6 @@
     margin: 0;
     padding: 0;
     border: 0;
-    vertical-align: baseline;
     outline: 0;
     font-family: 'Bebas Neue';
     font-size: 4.5rem;

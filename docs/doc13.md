@@ -1593,6 +1593,8 @@ Pensando em oferecer novos meios de transmitir informações, a Gerencianet disp
 
 <iframe width="800" height="420" src="https://www.youtube.com/embed/A6p1thz6Pe8" frameborder="0" allowfullscreen></iframe>
 
+<br>
+
 <blockquote class="alert-info2">
 <strong>Curso Completo de Integração com a API Gerencianet</strong><br><br>
 Para acesso as demais aulas, de outros assuntos, acesse a página <a href="https://dev.gerencianet.com.br/docs/curso-online-gerencianet" target="_blank" title="Link Interno">Curso Online de Integrações</a>.

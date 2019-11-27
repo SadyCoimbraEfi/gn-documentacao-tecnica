@@ -322,12 +322,6 @@ class Footer extends React.Component {
             </div>
           </div>
         </div>
-        <script
-          id="ze-snippet"
-          src="https://v2.zopim.com/?2NfJzLLgYjRjfHyYSrFYaRrUkFhQMwOS"
-        >
-          {" "}
-        </script>       
       </footer>
     );
   }

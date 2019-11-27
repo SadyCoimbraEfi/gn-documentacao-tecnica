@@ -415,7 +415,7 @@ Para verificar mais detalhes, <a href="https://dev.gerencianet.com.br/docs/playg
 <br>
 <hr>
 
-# 2. Defina a transação gerada como do tipo boleto balancete
+## 2. Defina a transação gerada como do tipo boleto balancete
 
 Após a criação da transação, será o momento de definirmos que o boleto a ser gerado será do tipo balancete.
 
@@ -431,4 +431,1150 @@ Cabe frisar que não há um padrão nos itens que serão exibidos, no sentido qu
 Em suma, é como se o integrador estivesse trabalhando com uma tabela construída em HTML, mas em formato JSON.
 </blockquote>
 
+<br>
 A seguir, um JSON de exemplo que pode ser utilizado para criar um boleto do tipo balancete:
+<br><br>
+
+<!--html-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.cod-balancete {
+    background-color: #f5f5f5;
+    height: 300px;
+    overflow: auto;
+}
+</style>
+</head>
+
+<div class="cod-balancete">
+<div ng-switch-when="code" class="ng-scope"><div class="block-code block-show-code ng-isolate-scope ng-valid" type="section.type" ng-model="section.data">
+  <div class="code-tabs">
+    <!-- ngRepeat: tab in data.codes track by $id($index) --><div ng-class="{tab: true, on:$index==current, off:$index!=current}" ng-repeat="tab in data.codes track by $id($index)" class="ng-scope tab on">
+<span ng-hide="$last" class="ng-hide"></span>
+    </div><!-- end ngRepeat: tab in data.codes track by $id($index) -->
+  </div>
+
+  <!-- ngRepeat: tab in data.codes track by $id($index) --><div ng-repeat="tab in data.codes track by $id($index)" ng-show="$index==current" class="ng-scope">
+  <!-- ngIf: data.codes[$index].code == "" -->
+  <!-- ngIf: data.codes[$index].code != "" --><pre ng-if="data.codes[$index].code != &quot;&quot;" class="cm-s-neo" data-mode="json">{
+  <span class="cm-property">"title"</span>: <span class="cm-string">"Balancete Demonstrativo - Periodo 25/06/2018 a 25/07/2018"</span>,
+  <span class="cm-property">"body"</span>: [{
+    <span class="cm-property">"header"</span>: <span class="cm-string">"Demonstrativo de Consumo"</span>,
+    <span class="cm-property">"tables"</span>: [{
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesa de condomínio:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total lançado"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Rateio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }],
+      [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Vigilância Contratado:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 300,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 75,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], 
+      [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Zeladoria Contratado:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 130,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 32,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Jardinagem:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 80,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 20,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Tarifa Bancária:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 10,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2,50"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesa condomínio:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 800,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 320,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Reforma de prédio:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 350,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 140,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Investimentos:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1320,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 450,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 350,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 140,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]
+    },
+    {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesas de Consumo"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de gás:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Data: 25/11/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Anterior"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Atual Consumo"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"g/l"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"49,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"63,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"14,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 53,50"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]
+    }, 
+    {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de água:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Data: 25/11/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Anterior"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Atual Consumo"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"m³"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"112,500000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"114,900000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"2,400000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 43,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]
+    }, 
+    {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de esgoto:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Data: 25/11/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Anterior"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Atual Consumo"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"m³"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 34,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]] 
+    }, { 
+        <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Resumo do rateio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesas de condomínio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 450,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Investimento"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 140,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Fundo de reserva 10%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 79,59"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de gás"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 53,50"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de água"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 43,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de esgoto"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 34,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Garagens"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 5,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Taxa de administradora"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 25,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total geral:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 823,49"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }]]
+    }]
+  },
+  {
+    <span class="cm-property">"header"</span>: <span class="cm-string">"Balancete Geral"</span>,
+    <span class="cm-property">"tables"</span>: [{
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"RECEITAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"RECEITAS DE CONDOMÍNIO"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2.090,12"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"100,00%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Taxa de Condominio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1.030,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"49,28%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Investimentos"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 280,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"13,40%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Gás"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 50,73"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"2,43%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Garagens"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 23,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"1,10%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Reserva Técnica"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 183,19"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"8,67%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Água"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 249,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"11,91%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Esgoto"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 199,20"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"9,53%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Taxa Administradora"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 75,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"3,59%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]] }, {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS DE CONDOMÍNIO"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1.670,12"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"100,00%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS DE AQUISIÇÕES"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesas de condomínio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 800,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"47,90%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Reformas do prédio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 350,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"20,96%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1.150,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"68,86%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]] } , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS COM SERVIÇOS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Vigilância Contratado"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 300,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"17,96%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Zeladoria Contratado"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 130,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"7,78%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Jardinagem"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 80,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"4,79%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 510,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"30,54%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]} , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS BANCÁRIAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Tarifa Bancária"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 10,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,60%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 10,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,60%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]] } , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Resumo de Prestação de Contas"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"RECEITAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2.090,12"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1.670,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"(Receitas - Despesas)R$ 420,12"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }]]} , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Resumo de Saldos"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Conta"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Saldo Anterior"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Entradas Saídas"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Saldo Atual"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"BANCOS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"21.816,28"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"2.090,12 1670,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"22.236,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Banco do Brasil"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"21.816,28"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"2.090,12 1670,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"22.236,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"(Bancos + Caixa)R$ 22.236,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }]] } , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Contas a Receber"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Contas a Receber até 30/09/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2.271,27"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Contas a Receber no Período de 01/10/17 até 30/10/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 549,31"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total de Contas a Receber"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2.820,58"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]
+    }]
+  }]
+}</pre><!-- end ngIf: data.codes[$index].code != "" -->
+</div><!-- end ngRepeat: tab in data.codes track by $id($index) -->
+</div></div>
+</div>
+
+<br>
+
+Como resultado do consumo do código do boleto balancete, é possível visualizar um exemplo de layout do boleto do tipo balancete, conforme demonstrado na imagem:
+
+<!--html-->
+<div ng-switch-when="image" class="ng-scope"><div class="block-image block-display-image ng-isolate-scope ng-valid" ng-show="data.images.length > 0" type="section.type" ng-model="section.data">
+  <figure ng-show="data.images[0].image.length">
+    <a href="https://files.readme.io/d917cf3-Boleto-Balancete.jpg" class="block-display-image-parent block-display-image-size-smart ">
+      <img ng-src="https://files.readme.io/d917cf3-Boleto-Balancete.jpg" src="https://files.readme.io/d917cf3-Boleto-Balancete.jpg">
+    </a>
+    <figcaption class="ng-binding"></figcaption>
+  </figure>
+</div></div>
+
+<br>
+
+<blockquote class="alert-alert">
+	<strong>IMPORTANTE</strong><br><br>
+	<p>As informações contidas no balancete não serão utilizadas pela Gerencianet. Recebemos o conteúdo da requisição de seu sistema/aplicação e apenas montamos a cobrança da forma que o integrador espera receber, conforme layout de exemplo acima.</p>
+  <p>Ou seja, a Gerencianet não valida as informações presentes no balancete e nem efetua cálculos de seu balancete, apenas processa e monta os dados dentro do layout conforme a estrutura do código contido em sua requisição à rota <code>POST /charge/:id/balance-sheet</code></p>
+</blockquote>
+
+<blockquote class="alert-alert">
+	<strong>IMPORTANTE</strong><br><br>
+	<p>As requisições para o endpoint de balancete não devem exceder 300 KB (body da requisição).</p>
+</blockquote>
+
+### a) Estrutura hierárquica dos atributos que podem ser utilizados:
+
+```json
+"id": "/BalanceSheet"
+    "title"
+    "body"
+        "header"
+        "tables"
+            "rows"
+        "header"
+        "tables"
+            "rows"
+```
+
+### b) Atributos que podem ser utilizados:
+
+<!--html-->

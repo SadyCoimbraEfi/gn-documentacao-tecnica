@@ -24,13 +24,13 @@ class HomeSplash extends React.Component {
     );
 
     const Logo = props => (
-      <div class="projectLogo">
+      <div className="projectLogo">
         <br/><img src={props.img_src} alt="Project Logo" />
       </div>
     );
 
     const ProjectTitle = () => (
-      <h1 class="titulo" className="projectTitle">
+      <h1 className="titulo" className="projectTitle">
         <br/>{siteConfig.tagline}
       </h1>
     );
@@ -136,7 +136,7 @@ class Index extends React.Component {
         {[
           {
             title: '<h1 class="sub-titulo">Suporte técnico e Integração via API</h1><br/><br/>',
-            content: '<section class="section-8 numeros-gerencianet"><div class="container"><div class="row"><div class="col-lg-10 col-md-12 col-12 mx-md-auto"><ul class="list-numbers aos-animate" data-aos=""><li> <i class="icon-transacoes-anuais"><img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/svg/icon-infografico-numeros-gerencianet-1.svg" alt="" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/svg/icon-infografico-numeros-gerencianet-1.svg" data-loaded="true"></i> <span>Ambiente</span> <span><b> SANDBOX</b></span> <span> Teste sua integração<br>sem complicações</span> <img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" alt="" class="sombra-icon" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" data-loaded="true"></li><li> <i><img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/svg/icon-infograficos-numeros-gerencianet-2.svg" alt="" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/svg/icon-infograficos-numeros-gerencianet-2.svg" data-loaded="true"></i> <span>Consultoria</span> <span><b> TÉCNICA</b></span> <span> Tire suas dúvidas<br> com desenvolvedores</span> <img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" alt="" class="sombra-icon" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" data-loaded="true"></li><li> <i><img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/svg/selo-12-anos-gerencianet.svg" alt="" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/svg/selo-12-anos-gerencianet.svg" data-loaded="true"></i> <span>Acesse</span> <span><b> GITHUB</b></span> <span> Projetos exclusivos<br>para sua integração</span> <img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" alt="" class="sombra-icon" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" data-loaded="true"></li></ul></div></div></div></section>'
+            content: '<section class="section-8 numeros-gerencianet"><div class="container"><div class="row"><div class="col-lg-10 col-md-12 col-12 mx-md-auto"><ul class="list-numbers aos-animate" data-aos=""><li> <i class="icon-transacoes-anuais"><img data-lazy="" data-src="img/lab-icon-sandbox.png" alt="" src="img/lab-icon-sandbox.png" data-loaded="true"></i> <span>Ambiente</span> <span><b> SANDBOX</b></span> <span> Teste sua integração<br>sem complicações</span> <img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" alt="" class="sombra-icon" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" data-loaded="true"></li><li> <i><img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/svg/icon-infograficos-numeros-gerencianet-2.svg" alt="" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/svg/icon-infograficos-numeros-gerencianet-2.svg" data-loaded="true"></i> <span>Consultoria</span> <span><b> TÉCNICA</b></span> <span> Tire suas dúvidas<br> com desenvolvedores</span> <img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" alt="" class="sombra-icon" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" data-loaded="true"></li><li> <i><img data-lazy="" data-src="img/github.png" alt="" src="img/github.png" data-loaded="true"></i> <span>Acesse</span> <span><b> GITHUB</b></span> <span> Projetos exclusivos<br>para sua integração</span> <img data-lazy="" data-src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" alt="" class="sombra-icon" src="https://gerencianet.com.br/wp-content/themes/Gerencianet/assets/images/sombra-numeros-gerencianet.png" data-loaded="true"></li></ul></div></div></div></section>'
           },
         ]}
        </Block>
@@ -146,8 +146,8 @@ class Index extends React.Component {
       <Block background="light">
         {[
           {
-            content: '<p align="justify" class="corpo2">Conheça os sistemas <strong><a href="#" style="color: #008996;"">Parceiros Oficiais da Gerencianet</a></strong> cuja integração com nossa API é nativa. Assim, você pode utilizar os serviços oferecidos pela Gerencianet de uma maneira simples e rápida, apenas preenchendo algumas configurações em seu sistema, de acordo com o manual da empresa proprietária do software.<br><br/>Seja também um <strong style="color: #008996;">parceiro</strong>!<br/><br/>Para a Gerencianet, este programa de parceria é sinônimo de um relacionamento com benefícios para ambas as partes, com desafios, metas, respeito, transparência e ganhos reais. <strong><a href="https://gerencianet.com.br/parceiros/" style="color: #008996;"> Quero fazer parte.</a></strong></p>',
-            image: `${baseUrl}img/parcerio-seguranca.png`,
+            content: '<p align="justify" class="corpo2">Conheça os sistemas <strong><a href="#" style="color: #008996;"">Parceiros Oficiais da Gerencianet</a></strong> cuja integração com nossa API é nativa. Assim, você pode utilizar os serviços oferecidos pela Gerencianet de uma maneira simples e rápida, apenas preenchendo algumas configurações em seu sistema, de acordo com o manual da empresa proprietária do software.',
+            image: `${baseUrl}img/api-parcerio.png`,
             imageAlign: 'left',
             title: '<h1 class="sub-titulo">Sistemas integrados <strong>parceiros</strong> da gerencianet</h1>',
           },
