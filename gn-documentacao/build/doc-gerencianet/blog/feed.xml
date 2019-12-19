@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Gerencianet Integrações Blog</title>
+        <link>https://gerencianet.com.br/blog</link>
+        <description>The best place to stay up-to-date with the latest Gerencianet Integrações news and events.</description>
+        <lastBuildDate>Tue, 08 Jan 2019 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>Gerencianet Integrações Blog</title>
+            <url>https://gerencianet.com.br/img/gerencianet-logo.png</url>
+            <link>https://gerencianet.com.br/blog</link>
+        </image>
+        <copyright>© 2007-${new Date().getFullYear()} Gerencianet. Todos os direitos reservados. CNPJ: 09.089.356/0001-18</copyright>
+        <item>
+            <title><![CDATA[Como obter as chaves Client Id e Client Secret na API?]]></title>
+            <link>https://gerencianet.com.br/blog/2019/01/08/obter-chaves-integracao.html</link>
+            <guid>https://gerencianet.com.br/blog/2019/01/08/obter-chaves-integracao.html</guid>
+            <pubDate>Tue, 08 Jan 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>As chaves Client_Id e Client_Secret da API permitem identificar a aplicação que está enviando a requisição e podem ser localizadas no seguinte local:</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Entendendo o fluxo das notificações (callbacks) da API]]></title>
+            <link>https://gerencianet.com.br/blog/2018/09/25/fluxo-notificacoes-callbacks.html</link>
+            <guid>https://gerencianet.com.br/blog/2018/09/25/fluxo-notificacoes-callbacks.html</guid>
+            <pubDate>Tue, 25 Sep 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Esta página tem como objetivo apresentar o Histórico de Notificações. Este recurso está disponível na API de sua conta Gerencianet e permite visualizar os POSTs que a Gerencianet dispara para a URL de notificação definida pelo integrador. Este POST contém apenas uma informação: um token de notificação.</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Mensagem de “Unauthorized” (sem autorização), por que?]]></title>
+            <link>https://gerencianet.com.br/blog/2018/02/27/Unauthorized.html</link>
+            <guid>https://gerencianet.com.br/blog/2018/02/27/Unauthorized.html</guid>
+            <pubDate>Tue, 27 Feb 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Essa mensagem de erro está relacionada em decorrência do envio incorreto das credenciais “Client_Id”, “Client_Secret” e/ou “sandbox”. Ou seja, quando se migra do ambiente de desenvolvimento para produção, não basta alterar o par de chaves, mas também é necessário alterar o valor do atributo “sandbox”.</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Quais os sistemas integrados à API da Gerencianet?]]></title>
+            <link>https://gerencianet.com.br/blog/2018/02/16/sistemas-integrados.html</link>
+            <guid>https://gerencianet.com.br/blog/2018/02/16/sistemas-integrados.html</guid>
+            <pubDate>Fri, 16 Feb 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h2><a class="anchor" aria-hidden="true" id="sistemas-integrados-de-parceiros"></a><a href="#sistemas-integrados-de-parceiros" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sistemas integrados de parceiros</h2>
+<p>Sistemas parceiros oficiais da Gerencianet cuja integração com nossa API é nativa. Assim, você pode utilizar os serviços oferecidos pela Gerencianet de uma maneira simples e rápida, apenas preenchendo algumas configurações em seu sistema, de acordo com o manual da empresa proprietária do software.</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Quais endereços de IP a Gerencianet utiliza?]]></title>
+            <link>https://gerencianet.com.br/blog/2018/02/07/ips-callback-gerencianet.html</link>
+            <guid>https://gerencianet.com.br/blog/2018/02/07/ips-callback-gerencianet.html</guid>
+            <pubDate>Wed, 07 Feb 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Algumas aplicações e serviços filtram nossas comunicações por meio dos nossos endereços de IP. Confira, abaixo, a lista dos endereços utilizados pela Gerencianet:</p>
+]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,1298 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Emissão Boleto Balancete · Gerencianet Integrações</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Este modelo de boleto é muito utilizado por condomínios e contabilidades e tem como objetivo proporcionar a demonstração prévia das movimentações financeiras do mês para condôminos e clientes. São disponibilizados dados como receitas, despesas e contas a receber. &lt;a href=&quot;https://s3-sa-east-1.amazonaws.com/pe85007/portal/wp-content/uploads/2018/07/27194840/boleto-balancete-legenda.jpg&quot; target=&quot;_blank&quot;&gt;Veja aqui&lt;/a&gt; como é um boleto balancete."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Emissão Boleto Balancete · Gerencianet Integrações"/><meta property="og:type" content="website"/><meta property="og:url" content="https://gerencianet.com.br/"/><meta property="og:description" content="Este modelo de boleto é muito utilizado por condomínios e contabilidades e tem como objetivo proporcionar a demonstração prévia das movimentações financeiras do mês para condôminos e clientes. São disponibilizados dados como receitas, despesas e contas a receber. &lt;a href=&quot;https://s3-sa-east-1.amazonaws.com/pe85007/portal/wp-content/uploads/2018/07/27194840/boleto-balancete-legenda.jpg&quot; target=&quot;_blank&quot;&gt;Veja aqui&lt;/a&gt; como é um boleto balancete."/><meta property="og:image" content="https://gerencianet.com.br/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://gerencianet.com.br/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon-32x32.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&amp;display=swap" type="text/css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/en"><img class="logo" src="/img/gerencianet-logo.png" alt="Gerencianet Integrações"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/en/doc1" target="_self">Documentação</a></li><li class=""><a href="https://github.com/gerencianet/" target="_self">GitHub</a></li><li class=""><a href="https://gerencianet.com.br/central-de-ajuda/api/" target="_self">FAQs</a></li><li class=""><a href="https://gerencianet.herokuapp.com/" target="_self">Slack</a></li><li class=""><a href="/en/help" target="_self">Ajuda</a></li><li class=""><a target="_self"></a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/pt-BR/doc14">Português (Brasil)</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Boleto Bancário</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Visão Geral<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/doc1">Introdução</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ambiente de Testes<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/doc2">Introdução ao Playground</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Instalação da API (SDKs)<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/doc3">Gerenciadores de Pacotes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc4">PHP</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc5">Node.Js</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc6">Ruby</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc7">Python</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc8">.Net</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc9">Java</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc10">Delphi</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc11">Go</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Boleto Bancário<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/doc12">Introdução</a></li><li class="navListItem"><a class="navItem" href="/docs/en/doc13">Emissão Boleto</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/doc14">Emissão Boleto Balancete</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Emissão Boleto Balancete</h1></header><article><div><span><p>Este modelo de boleto é muito utilizado por condomínios e contabilidades e tem como objetivo proporcionar a demonstração prévia das movimentações financeiras do mês para condôminos e clientes. São disponibilizados dados como receitas, despesas e contas a receber. <a href="https://s3-sa-east-1.amazonaws.com/pe85007/portal/wp-content/uploads/2018/07/27194840/boleto-balancete-legenda.jpg" target="_blank">Veja aqui</a> como é um boleto balancete.</p>
+<p>Para gerar um boleto bancário do tipo balancete é bem simples e requer apenas três passos:</p>
+<ol>
+<li><p><a href="https://dev.gerencianet.com.br/docs/boleto-balancete#section-1-criar-transa-o">Crie a transação</a>;</p></li>
+<li><p><a href="https://dev.gerencianet.com.br/docs/boleto-balancete#section-2-defina-a-transa-o-gerada-como-do-tipo-boleto-balancete">Defina a transação gerada como do tipo boleto balancete</a>;</p></li>
+<li><p><a href="https://dev.gerencianet.com.br/docs/boleto-balancete#section-3-associar-forma-de-pagamento-via-boleto">Por fim, associe à forma de pagamento via boleto</a>, informando o <code>charge_id</code> da transação.</p></li>
+</ol>
+<p>O restante desta página apresenta os procedimentos detalhados, mas você precisa instalar uma de nossas bibliotecas em seu servidor para executar os códigos de exemplo. <a href="https://dev.gerencianet.com.br/docs#section-2-bibliotecas">Certifique-se de que a SDK da Gerencianet foi instalada</a>.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="1-criar-transacão"></a><a href="#1-criar-transacão" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Criar transação</h2>
+<p>Primeiramente, precisamos gerar a transação (também chamada de &quot;cobrança&quot;). É neste momento que será informado o nome do item/produto/serviço, valor da transação, quantidade, dentre outras informações possíveis.</p>
+<p>Após criá-la, será retornado o <code>charge_id</code>, que é o identificador único da transação e que será utilizado para associar à forma de pagamento.</p>
+<p>Assim que essa transação é criada, ela recebe o status <code>new</code>, que significa que a cobrança foi gerada e está aguardando definição da forma de pagamento. Essa cobrança somente terá seu status alterado quando o integrador definir sua forma de pagamento.</p>
+<p>Para gerar uma transação, você deve enviar uma requisição <code>POST</code> para a rota <code>/v1/charge</code>.</p>
+<p>Caso queira, pode explorar e conhecer mais sobre este recurso <a href="https://dev.gerencianet.com.br/docs/playground-transacoes#charge" target="_blank">usando nosso Playground</a>.</p>
+<p>O exemplo abaixo mostra como isto pode ser feito, utilizando as SDK's disponíveis:</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-45-tab-46" class="nav-link active" data-group="group_45" data-tab="tab-group-45-content-46">PHP</div><div id="tab-group-45-tab-47" class="nav-link" data-group="group_45" data-tab="tab-group-45-content-47">.Net</div><div id="tab-group-45-tab-48" class="nav-link" data-group="group_45" data-tab="tab-group-45-content-48">Node.JS</div><div id="tab-group-45-tab-49" class="nav-link" data-group="group_45" data-tab="tab-group-45-content-49">Java</div><div id="tab-group-45-tab-50" class="nav-link" data-group="group_45" data-tab="tab-group-45-content-50">Go</div><div id="tab-group-45-tab-51" class="nav-link" data-group="group_45" data-tab="tab-group-45-content-51">Python</div><div id="tab-group-45-tab-52" class="nav-link" data-group="group_45" data-tab="tab-group-45-content-52">Ruby</div><div id="tab-group-45-tab-53" class="nav-link" data-group="group_45" data-tab="tab-group-45-content-53">Delphi</div></div><div class="tab-content"><div id="tab-group-45-content-46" class="tab-pane active" data-group="group_45" tabindex="-1"><div><span><pre><code class="hljs css language-php"><span class="hljs-meta">&lt;?php</span><br /><br /><span class="hljs-keyword">require</span> <span class="hljs-keyword">__DIR__</span>.<span class="hljs-string">'/../../vendor/autoload.php'</span>; <span class="hljs-comment">// caminho relacionado a SDK</span><br /><br /><span class="hljs-keyword">use</span> <span class="hljs-title">Gerencianet</span>\<span class="hljs-title">Exception</span>\<span class="hljs-title">GerencianetException</span>;<br /><span class="hljs-keyword">use</span> <span class="hljs-title">Gerencianet</span>\<span class="hljs-title">Gerencianet</span>;<br /><br />$clientId = <span class="hljs-string">'informe_seu_client_id'</span>; <span class="hljs-comment">// insira seu Client_Id, conforme o ambiente (Des ou Prod)</span><br />$clientSecret = <span class="hljs-string">'informe_seu_client_secret'</span>; <span class="hljs-comment">// insira seu Client_Secret, conforme o ambiente (Des ou Prod)</span><br /><br />$options = [<br />  <span class="hljs-string">'client_id'</span> =&gt; $clientId,<br />  <span class="hljs-string">'client_secret'</span> =&gt; $clientSecret,<br />  <span class="hljs-string">'sandbox'</span> =&gt; <span class="hljs-keyword">true</span> <span class="hljs-comment">// altere conforme o ambiente (true = desenvolvimento e false = producao)</span><br />];<br /><br />$item_1 = [<br />    <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'Item 1'</span>, <span class="hljs-comment">// nome do item, produto ou serviço</span><br />    <span class="hljs-string">'amount'</span> =&gt; <span class="hljs-number">1</span>, <span class="hljs-comment">// quantidade</span><br />    <span class="hljs-string">'value'</span> =&gt; <span class="hljs-number">1000</span> <span class="hljs-comment">// valor (1000 = R$ 10,00)</span><br />];<br /><br />$item_2 = [<br />    <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'Item 2'</span>, <span class="hljs-comment">// nome do item, produto ou serviço</span><br />    <span class="hljs-string">'amount'</span> =&gt; <span class="hljs-number">2</span>, <span class="hljs-comment">// quantidade</span><br />    <span class="hljs-string">'value'</span> =&gt; <span class="hljs-number">2000</span> <span class="hljs-comment">// valor (2000 = R$ 20,00)</span><br />];<br /><br />$items =  [<br />    $item_1,<br />    $item_2<br />];<br /><br /><span class="hljs-comment">// Exemplo para receber notificações da alteração do status da transação.</span><br /><span class="hljs-comment">// $metadata = ['notification_url'=&gt;'sua_url_de_notificacao_.com.br']</span><br /><span class="hljs-comment">// Outros detalhes em: https://dev.gerencianet.com.br/docs/notificacoes</span><br /><br /><span class="hljs-comment">// Como enviar seu $body com o $metadata</span><br /><span class="hljs-comment">// $body  =  [</span><br /><span class="hljs-comment">//    'items' =&gt; $items,</span><br /><span class="hljs-comment">//      'metadata' =&gt; $metadata</span><br /><span class="hljs-comment">// ];</span><br /><br />$body  =  [<br />    <span class="hljs-string">'items'</span> =&gt; $items<br />];<br /><br /><span class="hljs-keyword">try</span> {<br />    $api = <span class="hljs-keyword">new</span> Gerencianet($options);<br />    $charge = $api-&gt;createCharge([], $body);<br /><br />    print_r($charge);<br />} <span class="hljs-keyword">catch</span> (GerencianetException $e) {<br />    print_r($e-&gt;code);<br />    print_r($e-&gt;error);<br />    print_r($e-&gt;errorDescription);<br />} <span class="hljs-keyword">catch</span> (<span class="hljs-keyword">Exception</span> $e) {<br />    print_r($e-&gt;getMessage());<br />}<br /></code></pre>
+</span></div></div><div id="tab-group-45-content-47" class="tab-pane" data-group="group_45" tabindex="-1"><div><span><pre><code class="hljs css language-csharp"><span class="hljs-keyword">dynamic</span> endpoints = <span class="hljs-keyword">new</span> Endpoints(<span class="hljs-string">"client_id"</span>, <span class="hljs-string">"client_secret"</span>, <span class="hljs-literal">true</span>);<br /><br /><span class="hljs-keyword">var</span> body = <span class="hljs-keyword">new</span><br />{<br />    items = <span class="hljs-keyword">new</span>[] {<br />        <span class="hljs-keyword">new</span> {<br />            name = <span class="hljs-string">"Product 1"</span>,<br />            <span class="hljs-keyword">value</span> = <span class="hljs-number">1000</span>,<br />            amount = <span class="hljs-number">2</span><br />        }<br />    },<br />    shippings = <span class="hljs-keyword">new</span>[] {<br />        <span class="hljs-keyword">new</span> {<br />            name = <span class="hljs-string">"Default Shipping Cost"</span>,<br />            <span class="hljs-keyword">value</span> = <span class="hljs-number">100</span><br />        }<br />    }<br />};<br /><br /><span class="hljs-keyword">var</span> response = endpoints.CreateCharge(<span class="hljs-literal">null</span>, body);<br />Console.WriteLine(response);<br /></code></pre>
+</span></div></div><div id="tab-group-45-content-48" class="tab-pane" data-group="group_45" tabindex="-1"><div><span><pre><code class="hljs css language-javascript"><span class="hljs-meta">"use strict"</span>;<br /><br /><span class="hljs-keyword">var</span> Gerencianet = <span class="hljs-built_in">require</span>(<span class="hljs-string">"gn-api-sdk-node"</span>);<br /><br /><span class="hljs-keyword">var</span> clientId = <span class="hljs-string">"informe_seu_client_id"</span>;<br /><span class="hljs-keyword">var</span> clientSecret = <span class="hljs-string">"informe_seu_client_secret"</span>;<br /><br /><span class="hljs-keyword">var</span> options = {<br />  <span class="hljs-attr">client_id</span>: clientId,<br />  <span class="hljs-attr">client_secret</span>: clientSecret,<br />  <span class="hljs-attr">sandbox</span>: <span class="hljs-literal">true</span><br />};<br /><br /><span class="hljs-keyword">var</span> body = {<br />  <span class="hljs-attr">items</span>: [<br />    {<br />      <span class="hljs-attr">name</span>: <span class="hljs-string">"Product 1"</span>,<br />      <span class="hljs-attr">value</span>: <span class="hljs-number">1000</span>,<br />      <span class="hljs-attr">amount</span>: <span class="hljs-number">2</span><br />    }<br />  ],<br />  <span class="hljs-attr">shippings</span>: [<br />    {<br />      <span class="hljs-attr">name</span>: <span class="hljs-string">"Default Shipping Cost"</span>,<br />      <span class="hljs-attr">value</span>: <span class="hljs-number">100</span><br />    }<br />  ]<br />};<br /><br /><span class="hljs-keyword">var</span> gerencianet = <span class="hljs-keyword">new</span> Gerencianet(options);<br /><br />gerencianet<br />  .createCharge({}, body)<br />  .then(<span class="hljs-built_in">console</span>.log)<br />  .catch(<span class="hljs-built_in">console</span>.log)<br />  .done();<br /></code></pre>
+</span></div></div><div id="tab-group-45-content-49" class="tab-pane" data-group="group_45" tabindex="-1"><div><span><pre><code class="hljs css language-javascript"><span class="hljs-comment">/* Para que a SDK Java funcione corretamente, é necessário que a instanciação do módulo seja feita através da criação de um objeto do tipo Gerencianet.<br /><br />Sempre que quisermos chamar uma função da API, basta invocar o método call do objeto Gerencianet, passando como parâmetro o nome do método, os parâmetros da requisição (sempre será um HashMap&lt;String, String&gt;), e o "body", que consiste nas propriedades a serem passadas como argumento na chamada de um função da SDK. O "body" pode ser declarado de duas formas: um JSONObject ou um Map&lt;String, Object&gt;.<br /><br />Esta estrutura é necessária para representar o corpo da requisição http que é enviada à um determinado endpoint. Se o "body" for um JSONObject, o retorno do método call será um JSONObject, se for um Map&lt;String, Object&gt;, o retorno do método call será um Map&lt;String, Object&gt;<br /><br />A seguir, disponibilizamos links de nosso Github mostrando duas formas diferentes de retorno: JSONObject<br />e Map&lt;String, Object&gt;<br /><br /><br />JSONObject<br /><br />https://github.com/gerencianet/gn-api-sdk-java-examples/blob/master/src/main/java/br/com/gerencianet/charge/json/CreateCharge.java<br /><br /><br />Map&lt;String, Object&gt;<br /><br />https://github.com/gerencianet/gn-api-sdk-java-examples/blob/master/src/main/java/br/com/gerencianet/charge/map/CreateCharge.java<br /><br />*/</span><br /></code></pre>
+</span></div></div><div id="tab-group-45-content-50" class="tab-pane" data-group="group_45" tabindex="-1"><div><span><pre><code class="hljs css language-golang"><span class="hljs-comment">// No código de exemplo de uso da SDK de Go, definimos as credenciais de acesso à API (Client_Id e Client_Secret) e o ambiente a ser usado (sandbox como 'true' ou 'false') dentro de um arquivo específico (configs.go), que está localizado no diretório "_examples/configs". Essas credenciais são exportadas através da variável 'Credentials'.</span><br /><br /><span class="hljs-keyword">package</span> main<br /><br /><span class="hljs-keyword">import</span> (<br />    <span class="hljs-string">"fmt"</span><br />    <span class="hljs-string">"github.com/gerencianet/gn-api-sdk-go/gerencianet"</span><br />    <span class="hljs-string">"github.com/gerencianet/gn-api-sdk-go/_examples/configs"</span><br />)<br /><br /><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{<br /><br />    credentials := configs.Credentials<br />    gn := gerencianet.NewGerencianet(credentials)<br /><br />    body := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">interface</span>{} {<br />        <span class="hljs-string">"items"</span>: []<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">interface</span>{}{<br />            {<br />                <span class="hljs-string">"name"</span>: <span class="hljs-string">"Product 1"</span>,<br />                <span class="hljs-string">"value"</span>: <span class="hljs-number">1000</span>,<br />                <span class="hljs-string">"amount"</span>: <span class="hljs-number">2</span>,<br />            },<br />        },<br />        <span class="hljs-string">"shippings"</span>: []<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">interface</span>{} {<br />            {<br />                <span class="hljs-string">"name"</span>: <span class="hljs-string">"Default Shipping Cost"</span>,<br />                <span class="hljs-string">"value"</span>: <span class="hljs-number">100</span>,<br />            },<br />        },<br />    }<br /><br />    res, err := gn.CreateCharge(body)<br /><br />    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {<br />        fmt.Println(err)<br />    } <span class="hljs-keyword">else</span> {<br />        fmt.Println(res)<br />    }<br />}<br /></code></pre>
+</span></div></div><div id="tab-group-45-content-51" class="tab-pane" data-group="group_45" tabindex="-1"><div><span><pre><code class="hljs css language-python"><span class="hljs-keyword">from</span> gerencianet <span class="hljs-keyword">import</span> Gerencianet<br /><br />options = {<br />    <span class="hljs-string">'client_id'</span>: <span class="hljs-string">'client_id'</span>,<br />    <span class="hljs-string">'client_secret'</span>: <span class="hljs-string">'client_secret'</span>,<br />    <span class="hljs-string">'sandbox'</span>: <span class="hljs-literal">True</span><br />}<br /><br />gn = Gerencianet(options)<br /><br />body = {<br />    <span class="hljs-string">'items'</span>: [{<br />        <span class="hljs-string">'name'</span>: <span class="hljs-string">"Product 1"</span>,<br />        <span class="hljs-string">'value'</span>: <span class="hljs-number">1000</span>,<br />        <span class="hljs-string">'amount'</span>: <span class="hljs-number">2</span><br />    }],<br />    <span class="hljs-string">'shippings'</span>: [{<br />        <span class="hljs-string">'name'</span>: <span class="hljs-string">"Default Shipping Cost"</span>,<br />        <span class="hljs-string">'value'</span>: <span class="hljs-number">100</span><br />    }]<br />}<br /><br />gn.create_charge(body=body)<br /></code></pre>
+</span></div></div><div id="tab-group-45-content-52" class="tab-pane" data-group="group_45" tabindex="-1"><div><span><pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">"gerencianet"</span><br /><br />options = {<br />  <span class="hljs-symbol">client_id:</span> <span class="hljs-string">"client_id"</span>,<br />  <span class="hljs-symbol">client_secret:</span> <span class="hljs-string">"client_secret"</span>,<br />  <span class="hljs-symbol">sandbox:</span> <span class="hljs-literal">true</span><br />}<br /><br />body = {<br />  <span class="hljs-symbol">items:</span> [{<br />    <span class="hljs-symbol">name:</span> <span class="hljs-string">"Product 1"</span>,<br />    <span class="hljs-symbol">value:</span> <span class="hljs-number">1000</span>,<br />    <span class="hljs-symbol">amount:</span> <span class="hljs-number">2</span><br />  }],<br />  <span class="hljs-symbol">shippings:</span> [{<br />    <span class="hljs-symbol">name:</span> <span class="hljs-string">"Default Shipping Cost"</span>,<br />    <span class="hljs-symbol">value:</span> <span class="hljs-number">100</span><br />  }]<br />}<br /><br />gerencianet = Gerencianet.new(options)<br />gerencianet.create_charge(<span class="hljs-symbol">body:</span> body)<br /></code></pre>
+</span></div></div><div id="tab-group-45-content-53" class="tab-pane" data-group="group_45" tabindex="-1"><div><span><pre><code class="hljs css language-javascript">interface<br />function CreateCharge: String;<br /><br />implementation<br />uses uGerenciaClient, uGerenciaNetClientUtilities;<br />{... your code ... }<br /><br />function CreateCharge: String;<br />var<br />Body :  String;<br /><br />begin<br />  EnableService( 'GerenciaNet.dll' );<br />  ConfigureService( ToPAnsiChar( 'client_id' ),ToPAnsiChar( 'client_secret' ),'sandbox','config.json','');<br />  GerenciaNetAuthorize();<br /><br />  Body :=<br />  '{'+<br />    '"items":'+<br />      '['+<br />        '{'+<br />          '"name":"test article",'+<br />          '"value":1900,'+<br />          '"amount":2'+<br />        '},'+<br />        '{'+<br />          '"name":"test article 2",'+<br />          '"value":3000,'+<br />          '"amount":1'+<br />        '}'+<br />      ']'+<br />  '}';<br /><br />  Result := ExecuteGerenciaNetRequest( 'createCharge','','',Body );<br />end;<br /></code></pre>
+</span></div></div></div></div>
+<h3><a class="anchor" aria-hidden="true" id="a-estrutura-hierarquica-dos-atributos-que-podem-ser-utilizados"></a><a href="#a-estrutura-hierarquica-dos-atributos-que-podem-ser-utilizados" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>a) Estrutura hierárquica dos atributos que podem ser utilizados:</h3>
+<pre>"id": "/Charge"
+    "items"
+        "name"
+        "value"
+        "amount"
+        "marketplace"
+            "payee_code"
+            "percentage"
+    "shippings"
+        "name"
+        "value"
+        "payee_code"
+    "metadata"
+        "custom_id"
+        "notification_url"</pre>
+<p>Para verificar mais detalhes, <a href="https://dev.gerencianet.com.br/docs/playground-transacoes#charge" target="_blank">acesse aqui</a> e explore em nosso Playground.</p>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" id="b-atributos-que-podem-ser-utilizados"></a><a href="#b-atributos-que-podem-ser-utilizados" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>b) Atributos que podem ser utilizados:</h3>
+<table>
+  <tr>
+    <th>Atributo</th>
+    <th>Descrição</th>
+    <th>Obrigatório</th>
+    <th>Tipo</th>
+  </tr>
+  <tr>
+    <td><code>items</code></td>
+    <td>Item que está sendo vendido. Uma mesma transação pode possuir ilimitados itens.
+<p><span class="tab1"><em>Atributos de items</em></span></p>
+<div class="tab2"><code>name<strong class="atributo-obrigatorio">*</strong></code> // Nome do item, produto ou serviço. <strong class="descricao-atributo"><span class="atributo">Mínimo de 1 caractere e máximo de 255 caracteres (String).</span></strong></div>
+<div class="tab2"><code>value<strong class="atributo-obrigatorio">*</strong></code> // Valor, em centavos. Ex: R$ 10,00 = 1000. <strong class="descricao-atributo"><span class="atributo">Integer.</span></strong></div>
+<div class="tab2"><code>amount</code> // Quantidade. <strong class="descricao-atributo"><span class="atributo">Integer (padrão: 1)</span></strong></div>
+<div class="tab2"><code>marketplace</code> // Referente às configurações de repasses. <span class="atributo">Atributos:</span></div> <div class="tab2">
+<code>*payee_code*</code> (<a href="http://image.prntscr.com/image/cabe13e1e5b64449b942cf31139150ba.png" target="_blank">código identificador da conta Gerencianet</a> - String).
+<code>*percentage*</code> (porcentagem de repasse, sendo que 9000 equivale a 90% - Integer).</span></div></td>
+    <td>Sim</td>
+    <td>Array</td>
+  </tr>
+  <tr>
+    <td><code>shippings</code></td>
+    <td>Determina o(s) valor(es) de frete(s) de uma transação. Uma mesma transação pode possuir ilimitados valores de frete.
+<p><span class="tab1"><em>Atributos de shippings</em></span></p>
+<div class="tab2"><code>name<strong class="atributo-obrigatorio">*</strong></code> // Rótulo do frete. <strong class="descricao-atributo"><span class="atributo">Máximo de 255 caracteres. String.</span></strong></div>
+<div class="tab2"><code>value<strong class="atributo-obrigatorio">*</strong></code> // Valor do frete, em centavos (1990 equivale a R$19,90). <strong class="descricao-atributo"><span class="atributo">Integer.</span></strong></div>
+<div class="tab2"><code>payeeCode</code> // <a href="http://image.prntscr.com/image/cabe13e1e5b64449b942cf31139150ba.png" target="_blank">Código identificador da conta Gerencianet</a>, único por conta. <strong class="descricao-atributo"><span class="atributo">Padrão: Identificador da sua própria conta. String.</span></strong></div></td>
+    <td>Não</td>
+    <td>Array</td>
+  </tr>
+  <tr>
+    <td><code>metadata</code></td>
+    <td>Define dados específicos da transação.
+<p><span class="tab1"><em>Atributos de metadata</em></span></p>
+<div class="tab2"><code>custom_id</code> // Permite associar uma transação Gerencianet a uma ID específica de seu sistema ou aplicação, permitindo identificá-la caso você possua uma identificação específica e queira mantê-la. <strong class="descricao-atributo"><span class="atributo">Máximo de 255 caracteres. String/null.</span></strong></div>
+<div class="tab2"><code>notification_url</code> // Endereço de sua URL válida que receberá as notificações de mudanças de status das transações. <strong class="descricao-atributo"><span class="atributo">Máximo de 255 caracteres. String/null.</span></strong></div></td>
+    <td>Não</td>
+    <td>Object</td>
+  </tr>
+</table>
+<p><strong class="atributo-obrigatorio-texto">* valor obrigatório</strong></p>
+<p><br></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="2-defina-a-transacão-gerada-como-do-tipo-boleto-balancete"></a><a href="#2-defina-a-transacão-gerada-como-do-tipo-boleto-balancete" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Defina a transação gerada como do tipo boleto balancete</h2>
+<p>Após a criação da transação, será o momento de definirmos que o boleto a ser gerado será do tipo balancete.</p>
+<p>Para isso, você deve enviar uma requisição <code>POST</code> para a rota <code>/v1/charge/:id/balance-sheet</code>, onde <code>:id</code> é o <code>charge_id</code> da transação desejada.</p>
+<p>Caso queira, você pode explorar e conhecer mais sobre este recurso <a href="https://dev.gerencianet.com.br/docs/playground-transacoes#balance">usando nosso Playground</a> e utilizar como base o JSON abaixo:</p>
+<blockquote class="alert-info">
+<strong>Nota</strong><br><br>
+Cabe frisar que não há um padrão nos itens que serão exibidos, no sentido que o próprio integrador irá definir, através dos atributos devidos, a quantidade de colunas (até 4), linhas, textos e valores a serem exibidos no boleto do tipo balancete.
+<p>Em suma, é como se o integrador estivesse trabalhando com uma tabela construída em HTML, mas em formato JSON.</p>
+</blockquote>
+<p><br>
+A seguir, um JSON de exemplo que pode ser utilizado para criar um boleto do tipo balancete:
+<br><br></p>
+<!--html-->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.cod-balancete {
+    background-color: #f5f5f5;
+    height: 300px;
+    overflow: auto;
+}
+</style>
+</head>
+<div class="cod-balancete">
+<div ng-switch-when="code" class="ng-scope"><div class="block-code block-show-code ng-isolate-scope ng-valid" type="section.type" ng-model="section.data">
+  <div class="code-tabs">
+    <!-- ngRepeat: tab in data.codes track by $id($index) --><div ng-class="{tab: true, on:$index==current, off:$index!=current}" ng-repeat="tab in data.codes track by $id($index)" class="ng-scope tab on">
+<span ng-hide="$last" class="ng-hide"></span>
+    </div><!-- end ngRepeat: tab in data.codes track by $id($index) -->
+  </div>
+  <!-- ngRepeat: tab in data.codes track by $id($index) --><div ng-repeat="tab in data.codes track by $id($index)" ng-show="$index==current" class="ng-scope">
+  <!-- ngIf: data.codes[$index].code == "" -->
+  <!-- ngIf: data.codes[$index].code != "" --><pre ng-if="data.codes[$index].code != &quot;&quot;" class="cm-s-neo" data-mode="json">{
+  <span class="cm-property">"title"</span>: <span class="cm-string">"Balancete Demonstrativo - Periodo 25/06/2018 a 25/07/2018"</span>,
+  <span class="cm-property">"body"</span>: [{
+    <span class="cm-property">"header"</span>: <span class="cm-string">"Demonstrativo de Consumo"</span>,
+    <span class="cm-property">"tables"</span>: [{
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesa de condomínio:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total lançado"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Rateio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }],
+      [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Vigilância Contratado:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 300,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 75,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], 
+      [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Zeladoria Contratado:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 130,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 32,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Jardinagem:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 80,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 20,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Tarifa Bancária:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 10,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2,50"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesa condomínio:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 800,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 320,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Reforma de prédio:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 350,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 140,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Investimentos:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1320,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 450,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 350,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 140,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]
+    },
+    {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesas de Consumo"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de gás:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Data: 25/11/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Anterior"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Atual Consumo"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"g/l"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"49,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"63,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"14,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 53,50"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]
+    }, 
+    {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de água:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Data: 25/11/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Anterior"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Atual Consumo"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"m³"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"112,500000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"114,900000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"2,400000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 43,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]
+    }, 
+    {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de esgoto:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },
+      {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Data: 25/11/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Anterior"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Atual Consumo"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"m³"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,000000"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 34,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]] 
+    }, { 
+        <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Resumo do rateio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesas de condomínio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 450,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Investimento"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 140,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Fundo de reserva 10%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 79,59"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de gás"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 53,50"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de água"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 43,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Leitura de esgoto"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 34,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Garagens"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 5,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Taxa de administradora"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 25,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total geral:"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 823,49"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }]]
+    }]
+  },
+  {
+    <span class="cm-property">"header"</span>: <span class="cm-string">"Balancete Geral"</span>,
+    <span class="cm-property">"tables"</span>: [{
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"RECEITAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"RECEITAS DE CONDOMÍNIO"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2.090,12"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"100,00%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Taxa de Condominio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1.030,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"49,28%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Investimentos"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 280,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"13,40%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Gás"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 50,73"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"2,43%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Garagens"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 23,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"1,10%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Reserva Técnica"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 183,19"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"8,67%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Água"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 249,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"11,91%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Esgoto"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 199,20"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"9,53%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Taxa Administradora"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 75,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"3,59%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]] }, {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS DE CONDOMÍNIO"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1.670,12"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"100,00%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS DE AQUISIÇÕES"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Despesas de condomínio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 800,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"47,90%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Reformas do prédio"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 350,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"20,96%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1.150,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"68,86%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]] } , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS COM SERVIÇOS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Vigilância Contratado"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 300,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },  {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"17,96%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Zeladoria Contratado"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 130,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"7,78%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Serviço de Jardinagem"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 80,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"4,79%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 510,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"30,54%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]} , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS BANCÁRIAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Tarifa Bancária"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 10,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,60%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"center"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 10,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"0,60%"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]] } , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Resumo de Prestação de Contas"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"RECEITAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2.090,12"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"DESPESAS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 1.670,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"(Receitas - Despesas)R$ 420,12"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }]]} , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Resumo de Saldos"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Conta"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Saldo Anterior"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      },{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Entradas Saídas"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Saldo Atual"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"BANCOS"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"21.816,28"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"2.090,12 1670,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"22.236,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Banco do Brasil"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"21.816,28"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"2.090,12 1670,00"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"right"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"22.236,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">" "</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"(Bancos + Caixa)R$ 22.236,40"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">2</span>
+      }]] } , {
+      <span class="cm-property">"rows"</span>: [[{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#DC143C"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Contas a Receber"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">4</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Contas a Receber até 30/09/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2.271,27"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }],  [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Contas a Receber no Período de 01/10/17 até 30/10/2017"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 549,31"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }], [{
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"normal"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"Total de Contas a Receber"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">3</span>
+      }, {
+        <span class="cm-property">"align"</span>: <span class="cm-string">"left"</span>,
+        <span class="cm-property">"color"</span>: <span class="cm-string">"#000000"</span>,
+        <span class="cm-property">"style"</span>: <span class="cm-string">"bold"</span>,
+        <span class="cm-property">"text"</span>: <span class="cm-string">"R$ 2.820,58"</span>,
+        <span class="cm-property">"colspan"</span>: <span class="cm-number">1</span>
+      }]]
+    }]
+  }]
+}</pre><!-- end ngIf: data.codes[$index].code != "" -->
+</div><!-- end ngRepeat: tab in data.codes track by $id($index) -->
+</div></div>
+</div>
+<p><br></p>
+<p>Como resultado do consumo do código do boleto balancete, é possível visualizar um exemplo de layout do boleto do tipo balancete, conforme demonstrado na imagem:</p>
+<!--html-->
+<div ng-switch-when="image" class="ng-scope"><div class="block-image block-display-image ng-isolate-scope ng-valid" ng-show="data.images.length > 0" type="section.type" ng-model="section.data">
+  <figure ng-show="data.images[0].image.length">
+    <a href="https://files.readme.io/d917cf3-Boleto-Balancete.jpg" class="block-display-image-parent block-display-image-size-smart ">
+      <img ng-src="https://files.readme.io/d917cf3-Boleto-Balancete.jpg" src="https://files.readme.io/d917cf3-Boleto-Balancete.jpg">
+    </a>
+    <figcaption class="ng-binding"></figcaption>
+  </figure>
+</div></div>
+<p><br></p>
+<blockquote class="alert-alert">
+    <strong>IMPORTANTE</strong><br><br>
+    <p>As informações contidas no balancete não serão utilizadas pela Gerencianet. Recebemos o conteúdo da requisição de seu sistema/aplicação e apenas montamos a cobrança da forma que o integrador espera receber, conforme layout de exemplo acima.</p>
+  <p>Ou seja, a Gerencianet não valida as informações presentes no balancete e nem efetua cálculos de seu balancete, apenas processa e monta os dados dentro do layout conforme a estrutura do código contido em sua requisição à rota <code>POST /charge/:id/balance-sheet</code></p>
+</blockquote>
+<blockquote class="alert-alert">
+    <strong>IMPORTANTE</strong><br><br>
+    <p>As requisições para o endpoint de balancete não devem exceder 300 KB (body da requisição).</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="a-estrutura-hierarquica-dos-atributos-que-podem-ser-utilizados-1"></a><a href="#a-estrutura-hierarquica-dos-atributos-que-podem-ser-utilizados-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>a) Estrutura hierárquica dos atributos que podem ser utilizados:</h3>
+<pre><code class="hljs css language-json">"id": "/BalanceSheet"
+    "title"
+    "body"
+        "header"
+        "tables"
+            "rows"
+        "header"
+        "tables"
+            "rows"
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="b-atributos-que-podem-ser-utilizados-1"></a><a href="#b-atributos-que-podem-ser-utilizados-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>b) Atributos que podem ser utilizados:</h3>
+<!--html-->
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/doc13"><span class="arrow-prev">← </span><span>Emissão Boleto</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-criar-transacão">1. Criar transação</a><ul class="toc-headings"><li><a href="#a-estrutura-hierarquica-dos-atributos-que-podem-ser-utilizados">a) Estrutura hierárquica dos atributos que podem ser utilizados:</a></li><li><a href="#b-atributos-que-podem-ser-utilizados">b) Atributos que podem ser utilizados:</a></li></ul></li><li><a href="#2-defina-a-transacão-gerada-como-do-tipo-boleto-balancete">2. Defina a transação gerada como do tipo boleto balancete</a><ul class="toc-headings"><li><a href="#a-estrutura-hierarquica-dos-atributos-que-podem-ser-utilizados-1">a) Estrutura hierárquica dos atributos que podem ser utilizados:</a></li><li><a href="#b-atributos-que-podem-ser-utilizados-1">b) Atributos que podem ser utilizados:</a></li></ul></li></ul></nav></div><footer class="footer"><div class="footer-container menu"><div class="row pos-relative"><div class="col-lg-3 no-mobile"> <a href="/" class="marca-rodape"><span>Gerencianet</span></a></div><div class="col-lg-9 pos-relative"><div class="row"><div class="col-lg-12 mx-auto d-flex menu--list"><div class="column-1 no-phone"><h2>Precisa de Ajuda?</h2><ul><li><a href="https://gerencianet.com.br/blog/">Blog</a></li><li><a href="https://gerencianet.com.br/central-de-ajuda/">Central de Ajuda</a></li><li><a href="https://gerencianet.com.br/fale-conosco/">Fale conosco</a></li><li><a href="/fale-conosco#ouvidoria">Ouvidoria</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://dev.gerencianet.com.br/docs">Desenvolvedores</a></li></ul></div><div class="column-2 no-phone"><h2>Conheça mais</h2><div class="d-flex"><ul class="col-lg-7"><li>Soluções<ul><li><a href="/solucoes#boletos">Boletos</a></li><li><a href="/solucoes#carnes">Carnês</a></li><li><a href="/solucoes#links-de-pagamento">Links de pagamento</a></li><li><a href="/solucoes#assinaturas">Assinaturas</a></li><li><a href="/solucoes#marketplace">Marketplace</a></li><li><a href="/solucoes#cartao-pre-pago">Cartão pré-pago</a></li></ul></li></ul><ul class="col-lg-5"><li><a href="https://gerencianet.com.br/meu-cartao/">Meu Cartão</a></li><li><a href="https://gerencianet.com.br/tarifas/">Tarifas</a></li><li><a href="https://gerencianet.com.br/parceiros/">Parceiros</a></li><li><a href="https://gerencianet.com.br/empresa/">Sobre a Gerencianet</a></li></ul></div></div><div class="column-3 no-phone"><h2>Utilidades</h2><ul><li><a target="_blank" rel="noopener noreferrer" href="/trabalheconosco">Trabalhe conosco</a></li><li><a href="https://gerencianet.com.br/diretrizes-da-marca/">Diretrizes da marca</a></li><li><a href="https://gerencianet.com.br/confirmacoes/">Status das confirmações</a></li><li><a href="https://gerencianet.com.br/termos-de-uso/">Termos de uso</a></li><li><a href="https://gerencianet.com.br/politica-de-privacidade/">Política de privacidade</a></li></ul></div><div class="yes-phone col-9"><h2>Acompanhe-nos</h2><ul class="social"><li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UC4MAxjM78Yg3eK8v0V2yLHw"><span class="icon-youtube"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Gerencianet"><span class="icon-facebook"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/@gerencianet"><span class="icon-twitter"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gerencianet/"><span class="icon-instagram"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/ger-ncianet-pagamentos-do-brasil"><span class="icon-linkedin"></span></a></li></ul></div></div></div><div class="wrapper-line"><div class="outer-line"></div><div class="inner-line"></div></div></div><div class="row justify-content-center no-phone"><div class="col-lg-12 mx-auto d-flex"><div class="column-4"><ul class="download-app"><li><a href="https://play.google.com/store/apps/details?id=br.com.gerencianet.app&amp;hl=pt-BR" class="google-play" target="_blank" rel="noopener"><span>Disponível na Google play</span></a></li><li><a href="https://apps.apple.com/br/app/gerencianet/id1443363326" class="app-store" target="_blank" rel="noopener"><span>Disponível na App Store</span></a></li></ul></div><div class="column-5 flex-center"><ul class="social"><li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UC4MAxjM78Yg3eK8v0V2yLHw"><span class="icon-youtube"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Gerencianet"><span class="icon-facebook"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/@gerencianet"><span class="icon-twitter"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gerencianet/"><span class="icon-instagram"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/ger-ncianet-pagamentos-do-brasil"><span class="icon-linkedin"></span></a></li></ul></div></div></div><div class="row justify-content-md-center"><div class="col-lg-12"><div class="column-6"> <span class="termos-e-condicoes"> © 2007-2019 Gerencianet.<br class="yes-phone"/> Todos os direitos reservados.<br/> Gerencianet Pagamentos do Brasil Ltda.<br class="yes-phone"/> CNPJ: 09.089.356/0001-18<div class="yes-phone"><br/> <a href="http://gerencianet.com.br/termos-de-uso">Termos de uso</a> - <a href="http://gerencianet.com.br/politica-de-privacidade">Política de privacidade</a></div> </span></div></div></div><div class="row"><div class="col-md-11 pci"><div class="col-md-3 pci-width"><a href="https://gerencianet.com.br/artigo/gerencianet-possui-certificacao-pci-dss/" target="_blank" rel="noopener"><img src="/img/teste.png"/></a></div></div></div></div></div></footer></div></body></html>

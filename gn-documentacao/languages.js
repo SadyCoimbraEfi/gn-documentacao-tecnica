@@ -45,7 +45,7 @@ const languages = [
     tag: 'el',
   },
   {
-    enabled: true,
+    enabled: false,
     name: 'Español',
     tag: 'es-ES',
   },

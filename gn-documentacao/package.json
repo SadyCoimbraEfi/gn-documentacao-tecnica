@@ -11,6 +11,11 @@
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master"
   },
   "devDependencies": {
-    "docusaurus": "^1.13.0"
+    "docusaurus": "^1.13.0",
+    "purify-css": "^1.2.5"
+  },
+  "dependencies": {
+    "babel-preset-react-app": "^7.0.0",
+    "react": "^16.12.0"
   }
 }

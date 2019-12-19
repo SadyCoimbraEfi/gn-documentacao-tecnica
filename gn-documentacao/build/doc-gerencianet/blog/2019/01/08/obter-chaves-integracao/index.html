@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Como obter as chaves Client Id e Client Secret na API? · Gerencianet Integrações</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="As chaves Client_Id e Client_Secret da API permitem identificar a aplicação que está enviando a requisição e podem ser localizadas no seguinte local:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Como obter as chaves Client Id e Client Secret na API? · Gerencianet Integrações"/><meta property="og:type" content="website"/><meta property="og:url" content="https://gerencianet.com.br/blog/2019/01/08/obter-chaves-integracao"/><meta property="og:description" content="As chaves Client_Id e Client_Secret da API permitem identificar a aplicação que está enviando a requisição e podem ser localizadas no seguinte local:"/><meta property="og:image" content="https://gerencianet.com.br/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://gerencianet.com.br/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon-32x32.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue&amp;display=swap" type="text/css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/en"><img class="logo" src="/img/gerencianet-logo.png" alt="Gerencianet Integrações"/></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/doc1" target="_self">Documentação</a></li><li class=""><a href="https://github.com/gerencianet/" target="_self">GitHub</a></li><li class=""><a href="https://gerencianet.com.br/central-de-ajuda/api/" target="_self">FAQs</a></li><li class=""><a href="https://gerencianet.herokuapp.com/" target="_self">Slack</a></li><li class=""><a href="/en/help" target="_self">Ajuda</a></li><li class=""><a target="_self"></a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/pt-BR">Português (Brasil)</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2019/01/08/obter-chaves-integracao">Como obter as chaves Client Id e Client Secret na API?</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/09/25/fluxo-notificacoes-callbacks">Entendendo o fluxo das notificações (callbacks) da API</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/02/27/Unauthorized">Mensagem de “Unauthorized” (sem autorização), por que?</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/02/16/sistemas-integrados">Quais os sistemas integrados à API da Gerencianet?</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/02/07/ips-callback-gerencianet">Quais endereços de IP a Gerencianet utiliza?</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/01/08/obter-chaves-integracao">Como obter as chaves Client Id e Client Secret na API?</a></h1><p class="post-meta">January 8, 2019</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Whinter Gonçalves</a></p></div></header><div><span><p>As chaves Client_Id e Client_Secret da API permitem identificar a aplicação que está enviando a requisição e podem ser localizadas no seguinte local:</p>
+<!--truncate-->
+<ol>
+<li>Efetue login na conta Gerencianet e acesse o menu API &gt; Minhas Aplicações &gt; Sua Aplicação;</li>
+<li>Suas chaves estarão disponíveis nas abas Produção e Desenvolvimento, de acordo com o ambiente a ser utilizado, bastando copiar e colar em seu sistema.</li>
+</ol>
+<ul>
+<li>Caso for utilizar o ambiente de testes/sandbox (aba Desenvolvimento), informe seu Client_Id e Client_Secret disponíveis na aba Desenvolvimento (veja onde localizar);</li>
+<li>Agora, caso for utilizar o ambiente real (aba Produção), informe seu Client_Id e Client_Secret disponíveis na aba Produção (veja onde localizar).</li>
+</ul>
+<p>Dependendo do seu cenário, como por exemplo, se você estiver desenvolvendo um sistema, a configuração abaixo deverá ser atendida:</p>
+<ul>
+<li><strong>Ambiente de Desenvolvimento:</strong> chaves Client_Id e Client_Secret de Desenvolvimento e atributo sandbox como true</li>
+<li><strong>Ambiente de Produção:</strong> chaves Client_Id e Client_Secret de Produção e atributo sandbox como false</li>
+</ul>
+<p><strong>OBSERVAÇÃO:</strong> É importante que suas chaves não sejam compartilhadas nem visíveis na sua aplicação. O acesso indevido a essas credenciais podem viabilizar ações maliciosas e comprometer o não repúdio no que diz respeito a identidade da sua aplicação.</p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div><nav class="onPageNav"></nav></div><footer class="footer"><div class="footer-container menu"><div class="row pos-relative"><div class="col-lg-3 no-mobile"> <a href="/" class="marca-rodape"><span>Gerencianet</span></a></div><div class="col-lg-9 pos-relative"><div class="row"><div class="col-lg-12 mx-auto d-flex menu--list"><div class="column-1 no-phone"><h2>Precisa de Ajuda?</h2><ul><li><a href="https://gerencianet.com.br/blog/">Blog</a></li><li><a href="https://gerencianet.com.br/central-de-ajuda/">Central de Ajuda</a></li><li><a href="https://gerencianet.com.br/fale-conosco/">Fale conosco</a></li><li><a href="/fale-conosco#ouvidoria">Ouvidoria</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://dev.gerencianet.com.br/docs">Desenvolvedores</a></li></ul></div><div class="column-2 no-phone"><h2>Conheça mais</h2><div class="d-flex"><ul class="col-lg-7"><li>Soluções<ul><li><a href="/solucoes#boletos">Boletos</a></li><li><a href="/solucoes#carnes">Carnês</a></li><li><a href="/solucoes#links-de-pagamento">Links de pagamento</a></li><li><a href="/solucoes#assinaturas">Assinaturas</a></li><li><a href="/solucoes#marketplace">Marketplace</a></li><li><a href="/solucoes#cartao-pre-pago">Cartão pré-pago</a></li></ul></li></ul><ul class="col-lg-5"><li><a href="https://gerencianet.com.br/meu-cartao/">Meu Cartão</a></li><li><a href="https://gerencianet.com.br/tarifas/">Tarifas</a></li><li><a href="https://gerencianet.com.br/parceiros/">Parceiros</a></li><li><a href="https://gerencianet.com.br/empresa/">Sobre a Gerencianet</a></li></ul></div></div><div class="column-3 no-phone"><h2>Utilidades</h2><ul><li><a target="_blank" rel="noopener noreferrer" href="/trabalheconosco">Trabalhe conosco</a></li><li><a href="https://gerencianet.com.br/diretrizes-da-marca/">Diretrizes da marca</a></li><li><a href="https://gerencianet.com.br/confirmacoes/">Status das confirmações</a></li><li><a href="https://gerencianet.com.br/termos-de-uso/">Termos de uso</a></li><li><a href="https://gerencianet.com.br/politica-de-privacidade/">Política de privacidade</a></li></ul></div><div class="yes-phone col-9"><h2>Acompanhe-nos</h2><ul class="social"><li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UC4MAxjM78Yg3eK8v0V2yLHw"><span class="icon-youtube"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Gerencianet"><span class="icon-facebook"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/@gerencianet"><span class="icon-twitter"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gerencianet/"><span class="icon-instagram"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/ger-ncianet-pagamentos-do-brasil"><span class="icon-linkedin"></span></a></li></ul></div></div></div><div class="wrapper-line"><div class="outer-line"></div><div class="inner-line"></div></div></div><div class="row justify-content-center no-phone"><div class="col-lg-12 mx-auto d-flex"><div class="column-4"><ul class="download-app"><li><a href="https://play.google.com/store/apps/details?id=br.com.gerencianet.app&amp;hl=pt-BR" class="google-play" target="_blank" rel="noopener"><span>Disponível na Google play</span></a></li><li><a href="https://apps.apple.com/br/app/gerencianet/id1443363326" class="app-store" target="_blank" rel="noopener"><span>Disponível na App Store</span></a></li></ul></div><div class="column-5 flex-center"><ul class="social"><li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UC4MAxjM78Yg3eK8v0V2yLHw"><span class="icon-youtube"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Gerencianet"><span class="icon-facebook"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/@gerencianet"><span class="icon-twitter"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/gerencianet/"><span class="icon-instagram"></span></a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/ger-ncianet-pagamentos-do-brasil"><span class="icon-linkedin"></span></a></li></ul></div></div></div><div class="row justify-content-md-center"><div class="col-lg-12"><div class="column-6"> <span class="termos-e-condicoes"> © 2007-2019 Gerencianet.<br class="yes-phone"/> Todos os direitos reservados.<br/> Gerencianet Pagamentos do Brasil Ltda.<br class="yes-phone"/> CNPJ: 09.089.356/0001-18<div class="yes-phone"><br/> <a href="http://gerencianet.com.br/termos-de-uso">Termos de uso</a> - <a href="http://gerencianet.com.br/politica-de-privacidade">Política de privacidade</a></div> </span></div></div></div><div class="row"><div class="col-md-11 pci"><div class="col-md-3 pci-width"><a href="https://gerencianet.com.br/artigo/gerencianet-possui-certificacao-pci-dss/" target="_blank" rel="noopener"><img src="/img/teste.png"/></a></div></div></div></div></div></footer></div></body></html>

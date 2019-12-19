@@ -17,7 +17,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="footer">
-        <div className="whinter-container menu">
+        <div className="footer-container menu">
           <div className="row pos-relative">
             <div className="col-lg-3 no-mobile">
               {" "}
@@ -31,23 +31,23 @@ class Footer extends React.Component {
                   <div className="column-1 no-phone">
                     <h2>Precisa de Ajuda?</h2>
                     <ul>
-                      <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-11848">
+                      <li>
                         <a href="https://gerencianet.com.br/blog/">Blog</a>
                       </li>
-                      <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4496">
+                      <li>
                         <a href="https://gerencianet.com.br/central-de-ajuda/">
                           Central de Ajuda
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-11849">
+                      <li>
                         <a href="https://gerencianet.com.br/fale-conosco/">
                           Fale conosco
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11666">
+                      <li>
                         <a href="/fale-conosco#ouvidoria">Ouvidoria</a>
                       </li>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4497">
+                      <li>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -65,24 +65,24 @@ class Footer extends React.Component {
                         <li>
                           Soluções
                           <ul>
-                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11838">
+                            <li>
                               <a href="/solucoes#boletos">Boletos</a>
                             </li>
-                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11839">
+                            <li>
                               <a href="/solucoes#carnes">Carnês</a>
                             </li>
-                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11840">
+                            <li>
                               <a href="/solucoes#links-de-pagamento">
                                 Links de pagamento
                               </a>
                             </li>
-                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11841">
+                            <li>
                               <a href="/solucoes#assinaturas">Assinaturas</a>
                             </li>
-                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11842">
+                            <li>
                               <a href="/solucoes#marketplace">Marketplace</a>
                             </li>
-                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11991">
+                            <li>
                               <a href="/solucoes#cartao-pre-pago">
                                 Cartão pré-pago
                               </a>
@@ -91,23 +91,23 @@ class Footer extends React.Component {
                         </li>
                       </ul>
                       <ul className="col-lg-5">
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-11989">
+                        <li>
                           <a href="https://gerencianet.com.br/meu-cartao/">
                             Meu Cartão
                           </a>
                         </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
-                          <a href="https://gerencianet.com.br/tarifas/">
+                        <li>
+                            <a href="https://gerencianet.com.br/tarifas/">
                             Tarifas
                           </a>
                         </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-307">
+                        <li>
                           <a href="https://gerencianet.com.br/parceiros/">
                             Parceiros
                           </a>
                         </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-50">
-                          <a href="https://gerencianet.com.br/empresa/">
+                        <li>
+                            <a href="https://gerencianet.com.br/empresa/">
                             Sobre a Gerencianet
                           </a>
                         </li>
@@ -117,7 +117,7 @@ class Footer extends React.Component {
                   <div className="column-3 no-phone">
                     <h2>Utilidades</h2>
                     <ul>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4499">
+                      <li>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -126,22 +126,22 @@ class Footer extends React.Component {
                           Trabalhe conosco
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4502">
+                      <li>
                         <a href="https://gerencianet.com.br/diretrizes-da-marca/">
                           Diretrizes da marca
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-6845">
+                      <li>
                         <a href="https://gerencianet.com.br/confirmacoes/">
                           Status das confirmações
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-11835">
+                      <li>
                         <a href="https://gerencianet.com.br/termos-de-uso/">
                           Termos de uso
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-11837">
+                      <li>
                         <a href="https://gerencianet.com.br/politica-de-privacidade/">
                           Política de privacidade
                         </a>
@@ -151,7 +151,7 @@ class Footer extends React.Component {
                   <div className="yes-phone col-9">
                     <h2>Acompanhe-nos</h2>
                     <ul className="social">
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11843">
+                      <li>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -160,7 +160,7 @@ class Footer extends React.Component {
                           <span className="icon-youtube"></span>
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11844">
+                      <li>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -169,7 +169,7 @@ class Footer extends React.Component {
                           <span className="icon-facebook"></span>
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11845">
+                      <li>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -178,7 +178,7 @@ class Footer extends React.Component {
                           <span className="icon-twitter"></span>
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11846">
+                      <li>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -187,7 +187,7 @@ class Footer extends React.Component {
                           <span className="icon-instagram"></span>
                         </a>
                       </li>
-                      <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11847">
+                      <li>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
@@ -233,7 +233,7 @@ class Footer extends React.Component {
                 </div>
                 <div className="column-5 flex-center">
                   <ul className="social">
-                    <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11843">
+                    <li>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -242,7 +242,7 @@ class Footer extends React.Component {
                         <span className="icon-youtube"></span>
                       </a>
                     </li>
-                    <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11844">
+                    <li>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -251,7 +251,7 @@ class Footer extends React.Component {
                         <span className="icon-facebook"></span>
                       </a>
                     </li>
-                    <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11845">
+                    <li>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -260,7 +260,7 @@ class Footer extends React.Component {
                         <span className="icon-twitter"></span>
                       </a>
                     </li>
-                    <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11846">
+                    <li>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -269,7 +269,7 @@ class Footer extends React.Component {
                         <span className="icon-instagram"></span>
                       </a>
                     </li>
-                    <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-11847">
+                    <li>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"

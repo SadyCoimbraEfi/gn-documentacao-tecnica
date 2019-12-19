@@ -1986,7 +1986,7 @@ button {
     }
 }
 
-.whinter-container {
+.footer-container {
     width: 100%;
     max-width: 130rem;
     height: 100%;
@@ -2703,17 +2703,6 @@ button.btn-1 {
     padding-left: 3rem
 }
 
-.list-check li:before {
-    content: '';
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.2rem;
-    background: url(//gerencianet.com.br/wp-content/themes/Gerencianet/assets/css/../images/svg/icon-check.svg) no-repeat bottom left;
-    background-size: 1.5rem 1.2rem;
-    position: absolute;
-    left: 0;
-    top: .8rem
-}
 
 .pg-home .section-2 .pg-landing-page .footer a.footer--phone span b,
 .pg-home .section-2 .pg-landing-page-parceiros .footer a.footer--phone span b,
@@ -4766,33 +4755,6 @@ iframe[data-lazy] {
     }
 }
 
-#header .btn-3 {
-    padding: .9rem 2rem .8rem;
-    margin: 0 2rem 0 0;
-    border: 1px solid #00bcd0;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .15)
-}
-
-#header .btn-3 span {
-    color: #00bcd0
-}
-
-#header .btn-3:after {
-    background-color: #008996;
-    background-image: linear-gradient(0deg, #008996 49%, #00bcd0 49%)
-}
-
-#header .btn-3:hover {
-    transform: scale(1, 1) translateY(0)
-}
-
-#header .btn-3:hover span {
-    color: #fff
-}
-
-#header .btn-3.yes-mobile {
-    margin: 0
-}
 
 .wrapper-menu {
     position: absolute;
@@ -16093,10 +16055,6 @@ body.blog-menu-active .blog-menu li {
         -ms-transform: none;
         transform: none
     }
-}
-
-#at4-share {
-    margin-top: 10vh!important
 }
 
 .at-icon-wrapper,
