@@ -24,7 +24,7 @@ const siteConfig = {
             href: "https://gerencianet.com.br/central-de-ajuda/api/",
             label: "FAQs"
         },
-        { href: "https://gerencianet.herokuapp.com/", label: "Slack" },
+        { href: "https://discord.gg/djJ5PHC", label: "Discord" },
         { page: "help", label: "Ajuda" },
         { languages: false }
     ],
