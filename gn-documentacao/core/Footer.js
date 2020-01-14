@@ -52,7 +52,7 @@ class Footer extends React.Component {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="/fale-conosco#ouvidoria">
+                                                <a href="https://gerencianet.com.br/fale-conosco#ouvidoria">
                                                     Ouvidoria
                                                 </a>
                                             </li>
@@ -75,33 +75,33 @@ class Footer extends React.Component {
                                                     Soluções
                                                     <ul>
                                                         <li>
-                                                            <a href="/solucoes#boletos">
+                                                            <a href="https://gerencianet.com.br/solucoes#boletos">
                                                                 Boletos
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/solucoes#carnes">
+                                                            <a href="https://gerencianet.com.br/solucoes#carnes">
                                                                 Carnês
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/solucoes#links-de-pagamento">
+                                                            <a href="https://gerencianet.com.br/solucoes#links-de-pagamento">
                                                                 Links de
                                                                 pagamento
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/solucoes#assinaturas">
+                                                            <a href="https://gerencianet.com.br/solucoes#assinaturas">
                                                                 Assinaturas
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/solucoes#marketplace">
+                                                            <a href="https://gerencianet.com.br/solucoes#marketplace">
                                                                 Marketplace
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/solucoes#cartao-pre-pago">
+                                                            <a href="https://gerencianet.com.br/solucoes#cartao-pre-pago">
                                                                 Cartão pré-pago
                                                             </a>
                                                         </li>
@@ -139,7 +139,7 @@ class Footer extends React.Component {
                                                 <a
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    href="/trabalheconosco"
+                                                    href="https://gerencianet.com.br/trabalheconosco"
                                                 >
                                                     Trabalhe conosco
                                                 </a>
