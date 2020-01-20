@@ -138,14 +138,14 @@ $ go get github.com/gerencianet/gn-api-sdk-go/gerencianet
 <p>Veja como é fácil instalar nossa SDK e integrar em seu site ou sistema. Disponibilizamos em 8 (oito) linguagens:</p><br/>
 
 <div>
-	<a href="https://github.com/gerencianet/gn-api-sdk-php" target="_blank"><img src="http://localhost:3000/img/php-logo.png" class="sdks"></a>
-    <a href="https://github.com/gerencianet/gn-api-sdk-go" target="_blank"><img src="http://localhost:3000/img/golang.png" class="sdks"></a>
-    <a href="https://github.com/gerencianet/gn-api-sdk-java" target="_blank"><img src="http://localhost:3000/img/java-coffee-cup-logo.png" class="sdks"></a>
-    <a href="https://github.com/gerencianet/gn-api-sdk-python" target="_blank"><img src="http://localhost:3000/img/python.png" class="sdks"></a>
-    <a href="https://github.com/gerencianet/gn-api-sdk-ruby" target="_blank"><img src="http://localhost:3000/img/ruby-programming-language.png" class="sdks"></a>
-    <a href="https://github.com/gerencianet/gn-api-sdk-php" target="_blank"><img src="http://localhost:3000/img/c-sharp-logo.png" class="sdks"></a>
-    <a href="https://github.com/gerencianet/gn-api-sdk-node" target="_blank"><img src="http://localhost:3000/img/nodejs.png" class="sdks"></a>
-    <a href="https://github.com/gerencianet/gn-api-sdk-delphi" target="_blank"><img src="http://localhost:3000/img/delphi-ide.png" class="sdks"></a>
+	<a href="https://github.com/gerencianet/gn-api-sdk-php" target="_blank"><img src="/img/php-logo.png" class="sdks"></a>
+    <a href="https://github.com/gerencianet/gn-api-sdk-go" target="_blank"><img src="/img/golang.png" class="sdks"></a>
+    <a href="https://github.com/gerencianet/gn-api-sdk-java" target="_blank"><img src="/img/java-coffee-cup-logo.png" class="sdks"></a>
+    <a href="https://github.com/gerencianet/gn-api-sdk-python" target="_blank"><img src="/img/python.png" class="sdks"></a>
+    <a href="https://github.com/gerencianet/gn-api-sdk-ruby" target="_blank"><img src="/img/ruby-programming-language.png" class="sdks"></a>
+    <a href="https://github.com/gerencianet/gn-api-sdk-php" target="_blank"><img src="/img/c-sharp-logo.png" class="sdks"></a>
+    <a href="https://github.com/gerencianet/gn-api-sdk-node" target="_blank"><img src="/img/nodejs.png" class="sdks"></a>
+    <a href="https://github.com/gerencianet/gn-api-sdk-delphi" target="_blank"><img src="/img/delphi-ide.png" class="sdks"></a>
 </div>
 
 

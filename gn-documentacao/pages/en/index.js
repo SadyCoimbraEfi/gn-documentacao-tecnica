@@ -219,7 +219,7 @@ class Index extends React.Component {
                         target="_blank"
                         title="C# .NET"
                     >
-                        <img src="img/c-sharp-logo.png" />
+                        <img src="/img/c-sharp-logo.png" />
                     </a>
                     <a
                         className="productShowcaseSection paddingBottom"
@@ -227,7 +227,7 @@ class Index extends React.Component {
                         target="_blank"
                         title="Golang"
                     >
-                        <img src="img/golang.png" />
+                        <img src="/img/golang.png" />
                     </a>
                     <a
                         className="productShowcaseSection paddingBottom"
@@ -235,7 +235,7 @@ class Index extends React.Component {
                         target="_blank"
                         title="Java"
                     >
-                        <img src="img/java-coffee-cup-logo.png" />
+                        <img src="/img/java-coffee-cup-logo.png" />
                     </a>
                     <a
                         className="productShowcaseSection paddingBottom"
@@ -243,7 +243,7 @@ class Index extends React.Component {
                         target="_blank"
                         title="Python"
                     >
-                        <img src="img/python.png" />
+                        <img src="/img/python.png" />
                     </a>
                     <a
                         className="productShowcaseSection paddingBottom"
@@ -251,7 +251,7 @@ class Index extends React.Component {
                         target="_blank"
                         title="Ruby"
                     >
-                        <img src="img/ruby-programming-language.png" />
+                        <img src="/img/ruby-programming-language.png" />
                     </a>
                     <a
                         className="productShowcaseSection paddingBottom"
@@ -259,7 +259,7 @@ class Index extends React.Component {
                         target="_blank"
                         title="PHP"
                     >
-                        <img src="img/php-logo.png" />
+                        <img src="/img/php-logo.png" />
                     </a>
                     <a
                         className="productShowcaseSection paddingBottom"
@@ -267,7 +267,7 @@ class Index extends React.Component {
                         target="_blank"
                         title="NodeJS"
                     >
-                        <img src="img/nodejs.png" />
+                        <img src="/img/nodejs.png" />
                     </a>
                     <a
                         className="productShowcaseSection paddingBottom"
@@ -275,7 +275,7 @@ class Index extends React.Component {
                         target="_blank"
                         title="Delphi"
                     >
-                        <img src="img/delphi-ide.png" />
+                        <img src="/img/delphi-ide.png" />
                     </a>
                 </div>
             );
